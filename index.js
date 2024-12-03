@@ -13,14 +13,13 @@ app.get("/about", (req, res) => {
 });
 
 app.post("/data", (req, res) => {
-    res.type("json");
-    res.send(`{
-        "city": "New Orleans",
-        "state": "LA",
-        "population": "364,000"
-        }`);
-  res.status(200).json({ message: "Data received successfully" });
-});
+    res.status(200).json({
+      city: "New Orleans",
+      state: "LA",
+      population: "364,000",
+      message: "Data received successfully"
+    });
+  });
 
 app.listen(3000, () => {
   console.log("Server started on http://localhost:3000");
